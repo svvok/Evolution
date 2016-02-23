@@ -26,7 +26,7 @@
                 android:scrollbars="none">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
@@ -78,8 +78,7 @@
                 android:id="@+id/opponents_animals_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/opponents_list"
-                android:background="@color/colorAccent" />
+                android:layout_below="@id/opponents_list" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -107,5 +106,12 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_dialog_dialer" />
 
 </FrameLayout>

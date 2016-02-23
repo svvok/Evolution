@@ -1,6 +1,8 @@
 package com.example.svvok.evolution.models;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by svvok on 17.02.2016.
@@ -8,8 +10,8 @@ import java.util.ArrayList;
 public class Animal {
 
     protected Card animalCard;
-    private ArrayList<Characteristic> characteristics = new ArrayList<>();
-    private ArrayList<Characteristic> pairCharacteristics = new ArrayList<>();
+    private Set<Characteristic> characteristics = new HashSet<>();
+    private Set<Characteristic> pairCharacteristics = new HashSet<>();
     protected ArrayList<Food> hasFood = new ArrayList<>();
     private int needFood;
 
@@ -21,7 +23,7 @@ public class Animal {
         return animalCard;
     }
 
-    public ArrayList<Characteristic> getCharacteristics() {
+    public Set<Characteristic> getCharacteristics() {
         return characteristics;
     }
 
@@ -34,7 +36,7 @@ public class Animal {
         this.characteristics.remove(characteristic);
     }
 
-    public ArrayList<Characteristic> getPairCharacteristics() {
+    public Set<Characteristic> getPairCharacteristics() {
         return pairCharacteristics;
     }
 
