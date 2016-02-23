@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="wrap_content"
+    android:padding="1px">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark">
+
+        <ImageView
+            android:id="@+id/player_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@android:drawable/sym_def_app_icon" />
+
+        <TextView
+            android:id="@+id/player_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="no_name"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/player_points_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/player_avatar"
+            android:src="@drawable/ic_plus_one_white_18dp" />
+
+        <TextView
+            android:id="@+id/player_points_text"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_below="@id/player_avatar"
+            android:layout_toRightOf="@id/player_points_icon"
+            android:gravity="center"
+            android:text="27"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/player_cards_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@id/player_avatar"
+            android:layout_toRightOf="@id/player_points_text"
+            android:src="@drawable/ic_style_white_18dp" />
+
+        <TextView
+            android:id="@+id/player_cards_text"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_below="@id/player_avatar"
+            android:layout_toRightOf="@id/player_cards_icon"
+            android:gravity="center"
+            android:text="11"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/player_animals_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@id/player_avatar"
+            android:layout_toRightOf="@id/player_cards_text"
+            android:src="@drawable/ic_bug_report_white_18dp" />
+
+        <TextView
+            android:id="@+id/player_animals_text"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_below="@id/player_avatar"
+            android:layout_toRightOf="@id/player_animals_icon"
+            android:gravity="center"
+            android:text="10"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+</FrameLayout>
