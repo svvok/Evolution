@@ -2,9 +2,13 @@ package com.example.svvok.evolution;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.svvok.evolution.adapters.CardListAdapter;
 import com.example.svvok.evolution.models.Game;
 import com.example.svvok.evolution.models.Player;
 
@@ -62,23 +66,20 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         user = new Player("Слауик");
+        Game game = new Game(user, players);
 
+        ////////////////////////////////////////////
 
         initPlayersInfo(user, players);
 
 
-        Game game = new Game(user, players);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 
-
-
-
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-//
-//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.opponents_list);
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setAdapter(new OpponentsInfoAdapter(game.getOpponents()));
-//        recyclerView.setLayoutManager(layoutManager);
-//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.user_card_list);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(new CardListAdapter(game.getUser().getCards()));
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 
     void initPlayersInfo(Player user, ArrayList<Player> players) {
